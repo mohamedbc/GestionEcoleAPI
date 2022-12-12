@@ -1,11 +1,19 @@
 package com.babchikh.GestionEcoleAPI.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Etudiant {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(nullable = false, updatable = false)
 	private long id;
+	private String code;
 	private String nom;
 	private String prenom;
 	private String sexe;
@@ -33,6 +41,14 @@ public class Etudiant {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public String getNom() {
