@@ -1,6 +1,8 @@
 package com.babchikh.GestionEcoleAPI.model;
 
+import jakarta.persistence.Entity;
 
+@Entity
 public class Etudiant {
 	
 	private long id;
