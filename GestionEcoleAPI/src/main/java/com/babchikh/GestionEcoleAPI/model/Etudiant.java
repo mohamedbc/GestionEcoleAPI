@@ -20,19 +20,23 @@ public class Etudiant {
 	private String dateNaissance;
 	private String adresse;
 	private String numTel;
+	private String imageURL;
 	
 	public Etudiant() {
 		
 	}
 	
-	public Etudiant(String nom, String prenom, String sexe, String dateNaissance, String adresse, String numTel) {
+	public Etudiant(String code, String nom, String prenom, String sexe, String dateNaissance, String adresse, 
+			String numTel, String imageURL) {
 		super();
+		this.code = code;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.sexe = sexe;
 		this.dateNaissance = dateNaissance;
 		this.adresse = adresse;
 		this.numTel = numTel;
+		this.imageURL = imageURL;
 	}
 
 	public long getId() {
@@ -99,6 +103,13 @@ public class Etudiant {
 		this.numTel = numTel;
 	}
 	
+	public String getImageURL() {
+		return imageURL;
+	}
+
+	public void setImageURL(String imageURL) {
+		this.imageURL = imageURL;
+	}
 	
 	
 }
